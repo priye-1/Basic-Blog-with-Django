@@ -1,0 +1,40 @@
+.sidebar-nav {
+    margin-top: 50px;
+    padding-top: 50px;
+    list-style: none;
+ ;
+}
+#searchform {
+    margin-bottom: 6px;
+    width: 300px
+}
+#mydiv {
+    padding-left:10px;
+    color: white;
+    width:500px;
+    margin:5px 0px 5px;
+    border: 1px solid white;
+    border-radius: 25px; 
+    Padding-left:5px   
+}
+img {
+    width:70px; 
+    height:50px;
+    margin-top: 20px;
+}
+option {
+    color:#337ab7;
+    padding-left: 0px;
+    background-color: white;
+    border:0px;
+    float:right;
+}
+select {
+    float: right;
+    height:30px;
+    margin-left: 700px;
+    width:100px;
+}
+#sidebar {
+    display: inline-flex;
+}

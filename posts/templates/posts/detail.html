@@ -1,0 +1,20 @@
+
+{% extends "./base_generic.html" %}
+
+{% block title %}{{ post.title }}{% endblock title %}
+
+{% block content %}
+
+<h1>  Post by {{ post.publisher }}</h1>
+<hr>
+
+<body>
+    <img src= "{{ post.picture.url }} " alt="image">
+    <h1>{{ post.title }}</h1>
+    <h3>{{ post.headline }}</h3>
+    <h3>{{ post.content }}</h3>
+            
+</body>
+</html>
+
+{% endblock %}

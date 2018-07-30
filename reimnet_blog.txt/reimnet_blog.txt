@@ -1,0 +1,37 @@
+
+Reimnet Blog User Story
+
+Reimnet blog is blogging platform for Reimnet employees. 
+The blog will be used by employees to make daily posts. 
+These posts will be accessible publicly. 
+On accessing the blog, the initial page will display a list of all blog posts -
+with the latest ones appearing first, 
+
+while also allowing users to search for previous posts.
+
+The page should not hold more than 10 posts at any given time. 
+Each post will belong to, at least, one category.
+Each category will have a color of its own.
+Hence, readers can view posts that belong to a certain category.
+
+Typically, each post must have a header image to attract a reader, 
+and some sort of summary or say headline or like a preface of the post. 
+Nevertheless, each post can contain both texts and images.
+
+The author of a post should be as visible as possible, 
+alongside the date the post was published and the categories it belongs to. 
+We believe such information are necessary to the community.
+
+We think each post should be as SEO-friendly as possible. 
+We consider this blogging platform as a marketing tool,
+hence should get as much search-engine rank visibility as possible.
+
+From the employees end, one should be able to sort the posts by the author, 
+date of publication, and category.
+
+In order to avoid some PR disaster, 
+it's mandatory we review each employees writeup before he/she can post it on the platform. 
+Hence, the writer should be able to mark a post as draft until it's published.
+
+Lastly, we think each employee/writer that appears on the blog should have a public 
+accessible profile page that shows the blog posts made by that employee/writer.

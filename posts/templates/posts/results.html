@@ -1,0 +1,18 @@
+{% extends "./base_generic.html" %}
+
+{% block content %}
+    <h1> All Posts</h1>
+    <p>{{ results|length }}</p>
+    <hr>
+
+    {% for result in results %}
+        <div>
+            <img src= "{{ result.picture.url }} " alt="image">
+            <h3>{{ result.title }}</h3>
+            <h5>{{ result.headline }}</h5>
+            <p><strong> Publisher: </strong> {{ result.publisher }}</p>
+            <p><strong> Date Created:{{ result.date_created }} </strong></p>
+            <a href = "{% url 'posts:post-detail' result.id %}">View Post </a><br/><br/>
+        </div>
+    {% endfor %}
+{% endblock %}

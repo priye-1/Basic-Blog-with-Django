@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>{% block title %}{% endblock %} | Reimnet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% block meta %}
+    <meta name="Keywords" content="Reimnet,Blogs,posts,authors,learning,lessons,tips,websites">
+    <meta name="Description" content="Reimnet blog is blogging platform for Reimnet employees used to make daily posts. ">
+  {% endblock meta %}
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Add additional CSS in static file -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-2">
+
+      {% block sidebar %}
+      <ul class="sidebar-nav" style= "padding-top: 60px;" >
+        <li><a href="{% url 'posts:index' %}">Home</a></li>
+        <li><a href="{% url 'posts:post-list' %}">All Posts</a></li>
+        <li><a href="{% url 'posts:all-authors' %}">All Authors</a></li>
+      </ul>
+     {% endblock %}
+
+      </div>
+      <div class="col-sm-10 ">
+
+      {% block content %}
+      
+      {% endblock %}
+      </div>
+    </div>
+
+  </div>
+
+</html>

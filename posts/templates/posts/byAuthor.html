@@ -1,0 +1,48 @@
+
+{% extends "./base_generic.html" %}
+
+{% block content %}
+
+    <h1> All Posts Sorted By Author</h1>
+    <hr>
+    <div id="sidebar">
+            <div class="row">
+                    <div class="col-md-4">
+                            <form id="searchform" action="{% url 'posts:search' %}" method="GET">
+                                    {% comment %} {% csrf_token %} {% endcomment %}
+                                    <input id="q" type="search" class="form-control" value="{{ request.GET.q }}" placeholder = "Search here" name="q" maxlength="100" style =" margin-bottom:5px;" required />
+                                    <button class="btn btn-success" type="submit">Search</button>
+                            </form>
+                    </div>
+                </div>
+        <select onchange="location = this.value;">
+            <option value="">Sort Posts</option>
+            <option value ="{% url 'posts:post-authors' %}">By Author</option>
+            <option value="{% url 'posts:post-list' %}">By Date</option></li>
+        </select>
+    </div>
+
+    {% for post in  posts %}
+        {% if post in names %}
+            <div id="mydiv" style =" background-color:#0074D9;  color: hsla(208, 100%, 85%, 1.0); ">
+                <img src= "{{ post.picture.url }} " alt="image">
+                <h3>{{ post.title }}</h3>
+                <h5>{{ post.headline }}</h5>
+                <p><strong> Publisher: </strong> {{ post.publisher }}</p>
+                <p><strong> Date Created:{{ post.date_created }} </strong></p>
+                <a href = "{% url 'posts:post-detail' post.id %}" style = "color: white;">View Post </a><br/><br/>
+            </div>
+
+        {% else %}
+            <div id="mydiv" style ="background-color:#39CCCC; float:right; margin-left: 20px;">
+                <img src= "{{ post.picture.url }} " alt="image">
+                <h3>{{ post.title }}</h3>                
+                <h5>{{ post.headline }}</h5>
+                <p><strong> Publisher: </strong> {{ post.publisher }}</p>
+                <p><strong> Date Created: {{ post.date_created }} </strong></p>
+                <a href = "{% url 'posts:post-detail' post.id %}"  style = "color: white;">View Post </a><br/><br/>
+            </div>
+        {% endif %} 
+    {% endfor %}
+
+{% endblock %}
