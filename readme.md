@@ -14,9 +14,9 @@ A Blog for simple CRUD operations.
     - `python manage.py migrate`
     - `python manage.py createsuperuser`
 
-##Data Seeding
+## Data Seeding
 used the fixtures method to provide models with initial data, Json precisely.
--To import data into models from fixtures, run the command
-    * python manage.py loaddata <fixture-name>
--To export data from models into fixtures, run the command
-    * python manage.py dumpdata app-name > app-name/fixtures/<fixture-name>
+1. To import data into models from fixtures, run the command
+    - `python manage.py loaddata <fixture-name>`
+2. To export data from models into fixtures, run the command
+    - `python manage.py dumpdata app-name > app-name/fixtures/<fixture-name> `
